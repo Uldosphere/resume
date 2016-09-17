@@ -1,11 +1,11 @@
-<h2>Profile</h2>
-<p class="lead">I&#039;m a creative PHP webdeveloper</p>
+<h2><?= $general->profile_head; ?></h2>
+<p class="lead"><?= $profile->catch; ?></p>
 
 <hr />
 
 <div class="row">
 	<div class="col-md-4">
-		<h3>About me</h3>
+		<h3><?= $profile->title; ?></h3>
 		<p>
 			<?= $profile->biography; ?>
 		</p>
@@ -14,12 +14,12 @@
 		<img src="<?= VIEW_PATH; ?>images/nico.png" alt="Nicolas Bellengé" width="246" height="246" />
 	</div>
 	<div class="col-md-4">
-		<h3>Details</h3>
+		<h3><?= $profile->subtitle; ?></h3>
 		<p>
 			<strong>Name:</strong><br />
 			<?= $profile->full_name; ?><br />
 			<strong>Age:</strong><br />
-			<?= $profile->age; ?> years<br />
+			<?= $profile->age." ".$profile->years; ?><br />
 			<strong>Location:</strong><br />
 			<?= $profile->current_location->city; ?>, <?= $profile->current_location->country; ?>, <?= $profile->current_location->planet; ?>
 		</p>

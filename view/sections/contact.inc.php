@@ -1,6 +1,6 @@
-<h2>Contact</h2>
+<h2><?= $general->contact_head; ?></h2>
 <p class="lead">
-	&ldquo;Any sufficiently advanced technology is equivalent to magic. &rdquo;<br />- Arthur C. Clarke 
+	<?= $general->contact_quote; ?> 
 </p>
 
 <hr />

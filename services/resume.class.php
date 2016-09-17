@@ -3,6 +3,7 @@
 	namespace Services;
 	
 	/* LOAD DEPENDENCIES */
+	require_once('models/general.class.php');
 	require_once('models/profile.class.php');
 	require_once('presenters/collections/educations.class.php');
 	require_once('presenters/collections/careers.class.php');
@@ -32,6 +33,7 @@
 		
 		public function buildResume()
 		{
+			$this->loadGeneralInformation();
 			$this->loadProfileInformation();
 			$this->loadExperiences();
 			$this->loadAbilities();
@@ -42,6 +44,13 @@
 		
 		/* PRIVATE METHODS */
 		
+		private function loadGeneralInformation()
+		{
+			$loGeneral = new \Models\General();
+			
+			$this->ioViewController->assign('general', $loGeneral->get()); // $loGeneral->get() returns dto
+		}	
+
 		private function loadProfileInformation()
 		{
 			$loProfile = new \Models\Profile();

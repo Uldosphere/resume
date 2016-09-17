@@ -10,4 +10,7 @@
 	
 	define('VIEW_PATH', BASE.'view/');
 	
-	define('JSON_DATA_FILE', ROOT.'json/resume.json');
+	if (@isset($_GET['lang']) && $_GET['lang'] == 'fr')
+		define('JSON_DATA_FILE', ROOT.'json/resumeFR.json');
+	else
+		define('JSON_DATA_FILE', ROOT.'json/resumeUK.json');

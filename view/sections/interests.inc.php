@@ -1,6 +1,6 @@
-<h2>Interests</h2>
+<h2><?= $general->interests_head; ?></h2>
 <p class="lead">
-	&ldquo;The real danger is not that computers will begin to think like men, but that men will begin to think like computers.&rdquo;<br />- Sydney Harris
+	<?= $general->interests_quote; ?>
 </p>
 
 <hr />

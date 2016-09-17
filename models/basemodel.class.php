@@ -19,7 +19,7 @@
 		protected function extend($object) 
 		{
 			$object_variables = (@isset($object)) ? get_object_vars($object) : array();
-			
+		
 			foreach($object_variables as $field => $value) 
 			{
 				$this->$field = $value;

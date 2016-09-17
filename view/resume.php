@@ -29,7 +29,21 @@
 			<script src="<?= VIEW_PATH; ?>js/html5shiv.js"></script>
 			<script src="<?= VIEW_PATH; ?>js/respond.min.js"></script>
 		<![endif]-->
-		
+		<!-- Piwik -->
+		<script type="text/javascript">
+		  var _paq = _paq || [];
+		  _paq.push(['trackPageView']);
+		  _paq.push(['enableLinkTracking']);
+		  (function() {
+		    var u="//piwik.uldosphere.org/";
+		    _paq.push(['setTrackerUrl', u+'piwik.php']);
+		    _paq.push(['setSiteId', '1']);
+		    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+		    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+		  })();
+		</script>
+		<noscript><p><img src="//piwik.uldosphere.org/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+		<!-- End Piwik Code -->
 	</head>
 	<body data-spy="scroll" data-target="#navbar-example">	 
 		
@@ -44,7 +58,7 @@
 		<div id="top" class="jumbotron" data-src="<?= VIEW_PATH; ?>images/background/<?= $header_index ?>.gif" data-position="center center">
 			<div class="container">
 				<h1><?= $profile->full_name; ?></h1>
-				<p class="lead">Interactive resume</p>
+				<p class="lead"><?= $general->main_title; ?></p>
 			</div>
 			
 			<div class="overlay"></div>
@@ -74,10 +88,21 @@
 					<li><a href="#interests">Interests</a></li>
 					<li><a href="#projects">Projects</a></li>
 					<li><a href="#contact">Contact</a></li>
+					<?php
+					switch ($_GET['lang']) {
+						case 'fr' :
+							echo "<li id='flagUK'><a href='?lang=uk'></a></li>";
+						break;
+						default:
+							echo "<li id='flagFR'><a href='?lang=fr'></a></li>";
+						break;
+					}
+					?>
+					
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</nav>
-		
+
 		<div class="background-white">
 			<div id="profile" class="container">
 				<?php include(VIEW_INCLUDE_PATH.'sections/profile.inc.php'); ?>

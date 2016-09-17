@@ -1,11 +1,11 @@
-<h2>Abilities</h2>
+<h2><?= $general->abilities_head; ?></h2>
 <p class="lead">
-	&ldquo;Just because something doesn’t do what you planned it to do doesn’t mean it’s useless.&rdquo;<br />- Thomas Edison
+	<?= $general->abilities_quote; ?>
 </p>
 
 <hr />
 
-<h3>Skills</h3>
+<h3><?= $general->skills; ?></h3>
 
 <div class="row">
 
@@ -67,7 +67,7 @@
 
 <hr />
 
-<h3>Languages</h3>
+<h3><?= $general->languages; ?></h3>
 
 <div class="row">
 
@@ -124,7 +124,7 @@
 
 <hr />
 
-<h3>Tools</h3>
+<h3><?= $general->tools; ?></h3>
 
 <div class="row">
 	<?php if(count($tools) > 0) { 

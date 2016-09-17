@@ -1,6 +1,6 @@
-<h2>Projects</h2>
+<h2><?= $general->projects_head; ?></h2>
 <p class="lead">
-	&ldquo;The art challenges the technology, and the technology inspires the art.&rdquo;<br />- John Lasseter
+	<?= $general->projects_quote; ?>
 </p>
 
 <hr />

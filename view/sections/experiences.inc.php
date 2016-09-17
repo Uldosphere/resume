@@ -1,11 +1,11 @@
-<h2>Experiences</h2>
+<h2><?= $general->experience_head; ?></h2>
 <p class="lead">
-	&ldquo;Technology is anything that wasn’t around when you were born.&rdquo;<br />- Alan Kay 
+	<?= $general->experience_quote; ?>
 </p>
 
 <hr />
 
-<h3>Educations</h3>
+<h3><?= $general->educations; ?></h3>
 
 <?php if(count($educations) > 0) { ?>
 
@@ -53,7 +53,7 @@
 
 <hr />
 
-<h3>Careers</h3>
+<h3><?= $general->careers; ?></h3>
 
 <?php if(count($careers) > 0) { ?>
 
