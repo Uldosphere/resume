@@ -82,12 +82,12 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#profile">Profile</a></li>
-					<li><a href="#experiences">Experiences</a></li>
-					<li><a href="#abilities">Abilities</a></li>
-					<li><a href="#interests">Interests</a></li>
-					<li><a href="#projects">Projects</a></li>
-					<li><a href="#contact">Contact</a></li>
+					<li class="active"><a href="#profile"><?= $general->navbar->profile; ?></a></li>
+					<li><a href="#experiences"><?= $general->navbar->experiences; ?></a></li>
+					<li><a href="#abilities"><?= $general->navbar->abilities; ?></a></li>
+					<li><a href="#interests"><?= $general->navbar->interests; ?></a></li>
+					<li><a href="#projects"><?= $general->navbar->projects; ?></a></li>
+					<li><a href="#contact"><?= $general->navbar->contacts; ?></a></li>
 					<?php
 					switch ($_GET['lang']) {
 						case 'fr' :
